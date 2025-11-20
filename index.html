@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Musik Player — Rey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><span class="dot"></span>Musik</div>
+      <nav class="nav">
+        <a href="#">Beranda</a>
+        <a href="#">Jelajahi</a>
+        <a href="#">Radio</a>
+        <a href="#">Perpustakaan</a>
+      </nav>
+      <div>
+        <div class="s-muted">Playlistmu</div>
+        <div class="playlist-list">
+          <a href="#">Chill</a>
+          <a href="#">Pop</a>
+          <a href="#">Beats</a>
+        </div>
+      </div>
+      <div class="footer-text">Versi 1.0/div>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <div class="search"><input id="search" placeholder="Cari lagu, artis, album..." /></div>
+        <div class="user s-muted">Halo, Pengguna</div>
+      </div>
+
+      <section class="hero">
+         <img id="detailImg" src="covers/cover1.jpg" class="card-img-top">
+        <div class="playlist-info">
+          <div class="s-muted">PLAYLIST</div>
+          <div class="playlist-title">Playlist</div>
+          <div class="playlist-desc">Kumpulan lagu </div>
+        </div>
+      </section>
+
+      <section class="tracks" id="tracks"></section>
+
+      <section class="player">
+        <div class="left">
+          <div class="mini-cover" id="player-cover">♪</div>
+          <div>
+            <div id="player-title">Tidak ada lagu</div>
+            <div class="s-muted" id="player-artist">-</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="btn-row">
+            <button class="btn" id="prev">⟨⟨</button>
+            <button class="btn" id="play">Play</button>
+            <button class="btn" id="next">⟩⟩</button>
+            <button class="btn" id="shuffle">🔀</button>
+            <button class="btn" id="repeat">🔁</button>
+          </div>
+          <div class="progress">
+            <div class="time" id="time-cur">0:00</div>
+            <input type="range" id="seek" min="0" max="100" value="0">
+            <div class="time" id="time-dur">0:00</div>
+          </div>
+        </div>
+
+        <div class="volume-box">
+          <div class="s-muted">Volume</div>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8">
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
